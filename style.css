@@ -1,0 +1,77 @@
+
+body{
+	background-image: url("background.jpg");
+	
+}
+
+h1{
+	color: white;
+	font-family: Script MT;
+	text-align: center;
+}
+
+.meter{
+	padding-top: 70px;
+	
+}
+
+.meter-shape{
+	margin-top: 10px;
+	height: 55px;
+	width: 100%;
+	background: rgb(0,27,36);
+	background: linear-gradient(90deg, rgba(0,27,36,1) 0%, rgba(56,142,105,1) 23%, rgba(47,154,130,1) 46%, rgba(171,33,126,1) 79%, rgba(0,212,255,1) 100%);
+}
+
+.row{
+	margin-top: : 5px;
+	padding-top: 35px;
+}
+img{
+	float: left;
+	width: 72px;
+	border-radius:50px 50px;
+	position: absolute;
+}
+
+.btn{
+	font-family: cursive;
+    color: aliceblue;
+    font-size: x-large;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.btn:hover{
+	color: #b5d4c5;
+}
+
+label{
+	color: white;
+}
+
+
+.v1{
+	border-left: 6px solid #bd440f;
+  	height: 46px;
+}
+
+.v2{
+	
+	border-right: 6px solid #bd440f;
+  	height: 46px;	
+
+}
+
+
+.mood{
+	font-family: QumpellkaNo12;
+}
+
+.mood_status,#result{
+	font-family: Schadow BT;
+	margin-top:15px; 
+}
+

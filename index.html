@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Modo Meter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+	<div class="container-fluid"> 
+
+<br>
+		
+
+		<div class="meter">
+			
+			<h1>Greeshameter </h1>
+
+		
+			<div class="meter-shape">
+				
+				
+				<img src = 'Photo0341.jpg' id = "img" class="img">
+				
+
+			</div>
+
+		<br>
+		<div class="row" >
+		
+		<div class="col align-self-start" style="text-align: left;">
+			<div class="v1"></div><br>
+			<label class="mood">Need to talk </label>
+		</div>
+
+		<div class="col align-self-start style="text-align: center;">	
+		<center><button type="button" class="btn" id = 'mood'>Update</button>	</center>
+		</div>
+
+		<div class="col align-self-start" style="text-align: right;">
+			<div class="v2"></div><br>
+			<label class="mood">Fantastic </label>
+		
+		</div>
+
+		</div>
+
+
+		<label class="mood_status" >Mood Status : <span id = 'result'></span> </label>
+		</div>
+		
+
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+				
+				var imgwidth = $(".meter-shape").width();
+				
+				var n1 = (imgwidth*100)/100;
+
+				console.log(n1);
+
+				var num = Math.floor(Math.random()*(n1));
+				$("#img").animate({left:num},2500, 
+					function()
+					{
+					if(num>=0 && num<=((imgwidth*25)/100))
+				{
+				$("#result").text("I'm very sad");
+				}
+
+				if(num>((imgwidth*25)/100) && num<=((imgwidth*50)/100))
+				{
+				$("#result").text("My Mood is ok!!");
+				}
+				
+
+				if(num>((imgwidth*50)/100) &&num<=((imgwidth*75)/100))
+				{
+				$("#result").text("Still can be better !!");
+				}
+				
+
+				if(num>((imgwidth*75)/100) && num<=n1)
+				{
+				$("#result").text("I'm feeling Fantastic now!!!");
+				}
+					});
+
+				console.log(num);
+
+				
+			
+			});
+		});
+	</script>
+
+</body>
+</html>
